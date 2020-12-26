@@ -1,0 +1,23 @@
+.header_img_holder {
+  max-height: 110px;
+  overflow: hidden;
+}
+
+.content_header_img {
+  width: 100%;
+}
+
+.profile_img {
+  width: 150px;
+  float: left;
+}
+
+.description {
+  height: 150px;
+  padding: 10px 10px 0 160px;
+  margin-top: 0;
+}
+
+.descriptionBlock {
+  padding: 10px 10px 0 10px;
+}
