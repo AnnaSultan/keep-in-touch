@@ -7,6 +7,9 @@ let state = {
       { id: 2, message: "Another awsome post", likeCount: 23 },
       { id: 2, message: "Check this out!", likeCount: 23 },
     ],
+  },
+
+  dialogsPage: {
     dialogs: [
       { id: 1, name: "Nurzhan" },
       { id: 2, name: "Aliya" },
@@ -16,9 +19,6 @@ let state = {
       { id: 6, name: "Asli" },
       { id: 7, name: "Asiye" },
     ],
-  },
-
-  dialogsPage: {
     messages: [
       { id: 1, message: "Hi" },
       { id: 2, message: "How r you" },
@@ -27,6 +27,15 @@ let state = {
       { id: 5, message: "Tratata" },
       { id: 6, message: "Lalala" },
       { id: 7, message: "Ahaha" },
+    ],
+  },
+
+  sidebarPage: {
+    friends: [
+      { id: 1, friendName: "Aliya", friendSurname: "Nursultanova" },
+      { id: 2, friendName: "Ayge", friendSurname: "Nursultanova" },
+      { id: 3, friendName: "Anna", friendSurname: "Nursultanova" },
+      { id: 4, friendName: "Nurzhan", friendSurname: "Nursultanov" },
     ],
   },
 };
