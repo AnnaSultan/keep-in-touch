@@ -41,11 +41,11 @@ let store = {
       ],
     },
   },
-  getState() {
-    return this._state;
-  },
   _callSubscriber() {
     console.log("State has changed");
+  },
+  getState() {
+    return this._state;
   },
   addPost() {
     let newPost = {
@@ -65,6 +65,21 @@ let store = {
     this._callSubscriber = observer;
   },
 
+  dispatch(action) {
+    if (action.type === "ADD-POST") {
+      let newPost = {
+        id: 5,
+        message: this._state.profilePage.newPostText,
+        likeCount: 0,
+      };
+      this._state.profilePage.posts.push(newPost);
+      this._state.profilePage.newPostText = "";
+      this._callSubscriber(this._state);
+    } else if (action.type === "UPDATE_NEW_POST_TEXT") {
+      this._state.profilePage.newPostText = action.newText;
+      this._callSubscriber(this._state);
+    }
+  },
   // addMessage(message){
   //   let newMessage = {
   //     id: 8,
