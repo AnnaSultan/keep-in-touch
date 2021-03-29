@@ -1,8 +1,7 @@
-export const sidebarReducer = (state, action) => {
-  //   switch ((action, type)) {
-  //     default:
-  //       return state;
-  //   }
+let initialState = {};
+
+const sidebarReducer = (state = initialState, action) => {
+  return state;
 };
 
 export default sidebarReducer;
