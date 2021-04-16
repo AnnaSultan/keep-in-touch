@@ -35,6 +35,12 @@ const usersReducer = (state = initialState, action) => {
   }
 };
 
+// Дело в редъюсере, а именно вот в этой строчке:
+//  return {...state, users: [...state.users, ...action.users] }
+// поменяйте на
+// return {...state, users:action.users }
+// и будет работать.
+
 export const followAC = (userId) => ({ type: FOLLOW, userId });
 export const unfollowAC = (userId) => ({ type: UNFOLLOW, userId });
 export const setUsersAC = (users) => ({ type: SET_USERS, users });
